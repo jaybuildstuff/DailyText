@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ===== Meta & SEO ===== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Jay & Mah’s Shared Messages – track our journey, read daily notes, and look forward to our shared songs."
+  >
+
+  <!-- ===== PWA & Social ===== -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#f8f0ff">
+  <link
+    rel="canonical"
+    href="https://yourusername.github.io/your-repo-name/"
+  >
+  <meta
+    property="og:title"
+    content="Jay & Mah’s Shared Messages"
+  >
+  <meta
+    property="og:description"
+    content="Track our journey with daily messages and a live counter of our time together."
+  >
+  <meta
+    property="og:url"
+    content="https://yourusername.github.io/your-repo-name/"
+  >
+  <meta
+    property="og:image"
+    content="https://yourusername.github.io/your-repo-name/og-image.jpg"
+  >
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- ===== Fonts & Icons ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0..1000;1..1000&family=Lora:ital,wght@0..700;1..700&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- ===== Styles ===== -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <title>Jay & Mah’s Shared Messages</title>
+</head>
+
+<body>
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Theme Toggle -->
+  <button
+    id="themeToggleBtn"
+    class="theme-toggle"
+    aria-pressed="false"
+    aria-label="Toggle light/dark theme"
+  >
+    <i class="fas fa-moon" aria-hidden="true"></i>
+  </button>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header" role="banner">
+      <h1 class="header-title">Jay & Mah’s Shared Messages</h1>
+      <p class="header-subtitle">From our chats on Telegram 🫶</p>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main" class="main-content" role="main">
+      <!-- Journey Counter -->
+      <section
+        class="counter-container"
+        aria-label="Days, weeks and seconds since we started"
+      >
+        <h2 class="counter-title">Our journey so far...</h2>
+        <div id="counter" class="counter" aria-live="polite"></div>
+      </section>
+
+      <!-- Daily Message -->
+      <section
+        class="daily-message-section"
+        aria-label="Today's shared message"
+        aria-live="polite"
+      >
+        <div class="message-container">
+          <i class="fas fa-cat cat-icon" aria-hidden="true"></i>
+          <p id="daily-message"></p>
+          <i class="fas fa-cat cat-icon" aria-hidden="true"></i>
+        </div>
+
+        <div class="message-controls">
+          <button id="copyBtn" class="control-btn">
+            <i class="fas fa-copy" aria-hidden="true"></i>
+            Copy Message
+          </button>
+          <button id="shareBtn" class="control-btn">
+            <i class="fas fa-share-alt" aria-hidden="true"></i>
+            Share Message
+          </button>
+        </div>
+
+        <div class="image-container">
+          <picture>
+            <source
+              srcset="
+                assets/images/photo_2024-08-27_22-07-26.jpg?w=200 200w,
+                assets/images/photo_2024-08-27_22-07-26.jpg?w=400 400w
+              "
+              sizes="(max-width: 400px) 100vw, 400px"
+            >
+            <img
+              src="assets/images/photo_2024-08-27_22-07-26.jpg"
+              alt="Jay and Mah laughing together on a rooftop"
+              class="custom-image"
+              loading="lazy"
+            >
+          </picture>
+        </div>
+      </section>
+
+      <!-- Shared Songs (Coming Soon) -->
+      <section
+        class="coming-soon-section"
+        aria-label="Shared songs coming soon"
+      >
+        <h3 class="coming-soon-title">Our Shared Songs</h3>
+        <p class="coming-soon-text">Coming soon... 🎶</p>
+      </section>
+    </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="scripts/main.js"></script>
+</body>
+</html>
+```

@@ -1,0 +1,262 @@
+/* ==========================================================================
+   1. CSS Variables (Color Palettes & Themes)
+   ========================================================================== */
+
+:root {
+  /* Light Mode */
+  --color-background: #f8f0ff;
+  --color-surface:    #fff;
+  --color-text:       #333;
+  --color-secondary:  #6A5ACD;
+  --color-accent:     #B19CD9;
+  --color-border:     #E0D0F5;
+  --color-button-bg:  #4A90E2;
+  --color-button-text:#fff;
+}
+
+.dark-mode {
+  /* Dark Mode */
+  --color-background: #2C213A;
+  --color-surface:    #3C324B;
+  --color-text:       #E0D5F0;
+  --color-secondary:  #F0C5FF;
+  --color-accent:     #B19CD9;
+  --color-border:     #554466;
+  --color-button-bg:  #A58AE0;
+  --color-button-text:#333;
+}
+
+/* ==========================================================================
+   2. Global Reset & Base Styles
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'DM Sans', sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  transition: background-color 0.5s ease;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   3. Layout & Container
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  padding: 40px;
+  border-radius: 20px;
+
+  background-color: var(--color-surface);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+  transition: background-color 0.5s ease,
+              box-shadow       0.5s ease;
+  animation: fadeIn 1s ease-out;
+}
+
+/* ==========================================================================
+   4. Typography & Headings
+   ========================================================================== */
+
+.header-title,
+.counter-title,
+.coming-soon-title {
+  font-family: 'Lora', serif;
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+.header-title {
+  font-size: 2.5rem;
+}
+
+.header-subtitle {
+  margin-top: 0.25rem;
+  font-size: 1.2rem;
+  color: var(--color-secondary);
+}
+
+.counter {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.message-container p {
+  margin: 0;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+/* ==========================================================================
+   5. Animations
+   ========================================================================== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   6. Components & Sections
+   ========================================================================== */
+
+/* Header */
+.header {
+  margin-bottom: 30px;
+}
+
+/* Journey Counter */
+.counter-container {
+  margin: 40px 0;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Daily Message */
+.daily-message-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  animation: fadeIn 2s ease-out;
+}
+
+.message-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+  max-width: 600px;
+  width: 100%;
+}
+
+.cat-icon {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: var(--color-surface);
+}
+
+/* Image */
+.image-container {
+  max-width: 400px;
+  width: 100%;
+}
+
+.custom-image {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Message Controls */
+.message-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.control-btn,
+.theme-toggle {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+
+  background-color: var(--color-button-bg);
+  color: var(--color-button-text);
+  cursor: pointer;
+
+  transition: background-color 0.3s ease,
+              filter           0.3s ease;
+}
+
+.control-btn:hover,
+.theme-toggle:hover {
+  filter: brightness(1.1);
+}
+
+/* Coming Soon */
+.coming-soon-section {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid var(--color-border);
+
+  transition: border-color 0.5s ease;
+}
+
+.coming-soon-text {
+  margin-top: 0.5rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px 16px;
+
+  background-color: var(--color-secondary);
+  color: var(--color-surface);
+  text-decoration: none;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* ==========================================================================
+   7. Responsive Adjustments
+   ========================================================================== */
+
+@media (max-width: 600px) {
+  .header-title {
+    font-size: 2rem;
+  }
+  .counter-title {
+    font-size: 1.5rem;
+  }
+}

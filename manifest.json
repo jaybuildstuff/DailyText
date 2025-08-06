@@ -1,0 +1,42 @@
+{
+  "name": "Jay & Mah’s Shared Messages",
+  "short_name": "SharedMsgs",
+  "description": "Track our journey with daily messages and look forward to our shared songs.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f8f0ff",
+  "theme_color": "#6A5ACD",
+  "icons": [
+    {
+      "src": "icons/final-image.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/ii.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Today’s Message",
+      "short_name": "Today",
+      "description": "Open today’s shared message",
+      "url": "./index.html#daily-message",
+      "icons": [
+        {
+          "src": "icons/final-image.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "categories": ["social", "utilities"],
+  "prefer_related_applications": false
+}
